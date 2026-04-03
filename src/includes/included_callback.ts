@@ -2,9 +2,10 @@ import { type LucidModel, type ModelQueryBuilderContract } from '@adonisjs/lucid
 import { type ExtractModelRelations, type ModelRelations } from '@adonisjs/lucid/types/relations';
 import { type Include } from '../types.js';
 
-export class IncludedCallback<ParentModel extends LucidModel, RelatedModel extends LucidModel>
-  implements Include<ParentModel>
-{
+export class IncludedCallback<
+  ParentModel extends LucidModel,
+  RelatedModel extends LucidModel,
+> implements Include<ParentModel> {
   public constructor(
     public readonly callback: (
       query:

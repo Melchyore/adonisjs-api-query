@@ -62,7 +62,7 @@ export const extendModelQueryBuilderWithIncludesQuery = function (
     this._allowedIncludes = (
       new Collection(arrayIncludes)
         .reject((include) => typeof include === 'string' && include.length === 0)
-        .reduce<Collection<AllowedInclude<LucidModel>>>((result, include) => {
+        .reduce((result, include) => {
           if (include instanceof Collection) {
             for (const allowedInclude of include) {
               result = result!.push(allowedInclude);
