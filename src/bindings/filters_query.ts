@@ -42,13 +42,26 @@ export const extendModelQueryBuilderWithFiltersQuery = function (
     query._allowedFilters.each((allowedFilter) => {
       if (isFilterRequested(query, allowedFilter)) {
         const value = query.$apiQueryBuilderRequest.filters().get(allowedFilter.getName());
-        allowedFilter.filter(query, value);
+
+        if (allowedFilter.isGrouped()) {
+          query.where((grouped: ModelQueryBuilderWithAllowedFilters) => {
+            allowedFilter.filter(grouped, value);
+          });
+        } else {
+          allowedFilter.filter(query, value);
+        }
 
         return;
       }
 
       if (allowedFilter.hasDefault()) {
-        allowedFilter.filter(query, allowedFilter.getDefault());
+        if (allowedFilter.isGrouped()) {
+          query.where((grouped: ModelQueryBuilderWithAllowedFilters) => {
+            allowedFilter.filter(grouped, allowedFilter.getDefault());
+          });
+        } else {
+          allowedFilter.filter(query, allowedFilter.getDefault());
+        }
       }
     });
   };

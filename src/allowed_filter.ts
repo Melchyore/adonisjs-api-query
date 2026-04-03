@@ -78,7 +78,7 @@ export class AllowedFilter<Model extends LucidModel> {
     name = 'trashed',
     internalName?: ExtractKeys<ModelAttributes<InstanceType<Model>>>,
   ): AllowedFilter<Model> {
-    return new AllowedFilter<Model>(name, new FiltersTrashed<Model>(), internalName);
+    return new AllowedFilter<Model>(name, new FiltersTrashed<Model>(), internalName).withoutGrouping();
   }
 
   public static custom<Model extends LucidModel>(
@@ -122,6 +122,8 @@ export class AllowedFilter<Model extends LucidModel> {
   protected $hasDefault = false;
 
   protected nullable = false;
+
+  protected grouped = true;
 
   public constructor(
     name: string,
@@ -199,6 +201,16 @@ export class AllowedFilter<Model extends LucidModel> {
     this.default = undefined;
 
     return this;
+  }
+
+  public withoutGrouping(): this {
+    this.grouped = false;
+
+    return this;
+  }
+
+  public isGrouped(): boolean {
+    return this.grouped;
   }
 
   protected resolveValueForFiltering(value: unknown): StrictValuesWithoutRaw | null {

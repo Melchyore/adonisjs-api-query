@@ -98,7 +98,7 @@ test.group('filter', (group) => {
       .toQuery();
     const expectedSql = TestModel.query()
       .select('id', 'name')
-      .whereRaw('LOWER(??) LIKE ?', ['name', '%john%'])
+      .whereRaw('(LOWER(??) LIKE ?)', ['name', '%john%'])
       .toQuery();
 
     assert.equal(queryBuilderSql, expectedSql);
@@ -132,7 +132,7 @@ test.group('filter', (group) => {
       .allowedFilters(AllowedFilter.partial('id'))
       .toQuery();
 
-    assert.include(query, 'select * from `test_models` where (LOWER(`id`) LIKE');
+    assert.include(query, 'select * from `test_models` where ((LOWER(`id`) LIKE');
   });
 
   test('falsy values are not ignored when applying a begins with strict filter', async ({ assert }) => {
@@ -143,7 +143,7 @@ test.group('filter', (group) => {
       .allowedFilters(AllowedFilter.beginsWithStrict('id'))
       .toQuery();
 
-    assert.include(query, 'select * from `test_models` where (id LIKE');
+    assert.include(query, 'select * from `test_models` where ((id LIKE');
   });
 
   test('falsy values are not ignored when applying a ends with strict filter', async ({ assert }) => {
@@ -154,7 +154,7 @@ test.group('filter', (group) => {
       .allowedFilters(AllowedFilter.endsWithStrict('id'))
       .toQuery();
 
-    assert.include(query, 'select * from `test_models` where (id LIKE');
+    assert.include(query, 'select * from `test_models` where ((id LIKE');
   });
 
   test('can filter partial using begins with strict', async ({ assert }) => {
@@ -610,7 +610,7 @@ test.group('filter', (group) => {
     }).allowedFilters(AllowedFilter.exact('name').setNullable());
     const models = await query.exec();
 
-    assert.include(query.toQuery(), 'select * from `test_models` where `test_models`.`name` is null');
+    assert.include(query.toQuery(), 'select * from `test_models` where (`test_models`.`name` is null');
     assert.lengthOf(models, 1);
   });
 

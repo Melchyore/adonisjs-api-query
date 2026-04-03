@@ -43,9 +43,9 @@ test.group('filter trashed', (group) => {
     await createDbModels(app, SoftDeleteModelFactory, 2);
     await SoftDeleteModelFactory.merge({ deletedAt: DateTime.now() }).create();
     const resultModels = await createQueryFromFilterRequest({ onlyTrashed: true }, SoftDeleteModel).allowedFilters(
-      AllowedFilter.callback('onlyTrashed', (query) => {
+      AllowedFilter.callback<typeof SoftDeleteModel>('onlyTrashed', (query) => {
         void query.withScopes((scope) => scope.onlyTrashedScope());
-      }),
+      }).withoutGrouping(),
     );
 
     assert.lengthOf(resultModels, 1);

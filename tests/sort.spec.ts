@@ -340,11 +340,11 @@ test.group('sort', (group) => {
     assert.equal(
       query.toQuery(),
       [
-        "select * from `test_models` where `name` = 'foo' and `created_at` between '",
+        "select * from `test_models` where (`name` = 'foo') and (`created_at` between '",
         from,
         "' and '",
         to,
-        "' order by `name` desc",
+        "') order by `name` desc",
       ].join(''),
     );
     assert.deepEqual(sortedCollection.pluck('id').all(), originalCollection.pluck('id').all());
