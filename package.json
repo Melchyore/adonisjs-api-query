@@ -1,5 +1,5 @@
 {
-  "name": "@eienjs/adonisjs-api-query",
+  "name": "@melchyore/adonisjs-api-query",
   "description": "Easily build Lucid queries from API requests",
   "version": "1.1.1",
   "type": "module",
@@ -75,15 +75,15 @@
     "@adonisjs/core": "^6.17.2",
     "@adonisjs/lucid": "^21.6.0"
   },
-  "author": "Fernando Isidro <luffynando@gmail.com>",
+  "author": "Benhamed Oussama <contact@melchyore.com>",
   "license": "MIT",
-  "homepage": "https://github.com/eienjs/adonisjs-api-query",
+  "homepage": "https://github.com/Melchyore/adonisjs-api-query",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eienjs/adonisjs-api-query.git"
+    "url": "git+https://github.com/Melchyore/adonisjs-api-query.git"
   },
   "bugs": {
-    "url": "https://github.com/eienjs/adonisjs-api-query/issues"
+    "url": "https://github.com/Melchyore/adonisjs-api-query/issues"
   },
   "keywords": [
     "adonisjs",

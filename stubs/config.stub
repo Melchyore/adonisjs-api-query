@@ -1,7 +1,7 @@
 {{{
   exports({ to: app.configPath('apiquery.ts') })
 }}}
-import { defineConfig } from '@eienjs/adonisjs-api-query'
+import { defineConfig } from '@melchyore/adonisjs-api-query'
 
 const apiQueryConfig = defineConfig({
   /**

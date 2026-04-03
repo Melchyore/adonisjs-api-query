@@ -1,4 +1,6 @@
-# @eienjs/adonisjs-api-query
+# @melchyore/adonisjs-api-query
+
+This project is a fork of EienJS, modified and maintained by Melchyore.
 
 [![Source Code][badge-source]][source]
 [![Npm Node Version Support][badge-node-version]][node-version]
@@ -13,29 +15,25 @@
 
 This package provides a set of macros on `ModelQueryBuilder` to build [Lucid](https://adonisjs.com/docs/lucid) queries from API requests. Inspired by [Spatie's Laravel Query Builder](https://github.com/spatie/laravel-query-builder).
 
-## Documentation
-
-The documentation is available on [EienJS](https://eienjs.com/packages/adonisjs-api-query/getting-started/).
-
 ## Contributing
 
 Contributions are welcome. Please read [CONTRIBUTING][] for more details and remember to check the [CHANGELOG][] file.
 
 ## Copyright and License
 
-The `@eienjs/adonisjs-api-query` library is licensed for use under the MIT License (MIT). Please see [LICENSE][] for more information.
+The `@melchyore/adonisjs-api-query` library is licensed for use under the MIT License (MIT). Please see [LICENSE][] for more information.
 
-[contributing]: https://github.com/eienjs/.github/blob/main/docs/CONTRIBUTING.md
-[changelog]: https://github.com/eienjs/adonisjs-api-query/blob/main/CHANGELOG.md
-[source]: https://github.com/eienjs/adonisjs-api-query
-[node-version]: https://www.npmjs.com/package/@eienjs/adonisjs-api-query
-[release]: https://www.npmjs.com/package/@eienjs/adonisjs-api-query
-[license]: https://github.com/eienjs/adonisjs-api-query/blob/main/LICENSE.md
-[build]: https://github.com/eienjs/adonisjs-api-query/actions/workflows/build.yml?query=branch:main
-[downloads]: https://www.npmjs.com/package/@eienjs/adonisjs-api-query
-[badge-source]: https://img.shields.io/badge/source-eienjs/adonisjs--api--query-blue.svg?logo=github
-[badge-node-version]: https://img.shields.io/node/v/@eienjs/adonisjs-api-query.svg?logo=nodedotjs
-[badge-release]: https://img.shields.io/npm/v/@eienjs/adonisjs-api-query.svg?logo=npm
-[badge-license]: https://img.shields.io/github/license/eienjs/adonisjs-api-query?logo=open-source-initiative
-[badge-build]: https://img.shields.io/github/actions/workflow/status/eienjs/adonisjs-api-query/build.yml?branch=main
-[badge-downloads]: https://img.shields.io/npm/dm/@eienjs/adonisjs-api-query.svg?logo=npm
+[contributing]: https://github.com/melchyore/.github/blob/main/docs/CONTRIBUTING.md
+[changelog]: https://github.com/melchyore/adonisjs-api-query/blob/main/CHANGELOG.md
+[source]: https://github.com/melchyore/adonisjs-api-query
+[node-version]: https://www.npmjs.com/package/@melchyore/adonisjs-api-query
+[release]: https://www.npmjs.com/package/@melchyore/adonisjs-api-query
+[license]: https://github.com/melchyore/adonisjs-api-query/blob/main/LICENSE.md
+[build]: https://github.com/melchyore/adonisjs-api-query/actions/workflows/build.yml?query=branch:main
+[downloads]: https://www.npmjs.com/package/@melchyore/adonisjs-api-query
+[badge-source]: https://img.shields.io/badge/source-melchyore/adonisjs--api--query-blue.svg?logo=github
+[badge-node-version]: https://img.shields.io/node/v/@melchyore/adonisjs-api-query.svg?logo=nodedotjs
+[badge-release]: https://img.shields.io/npm/v/@melchyore/adonisjs-api-query.svg?logo=npm
+[badge-license]: https://img.shields.io/github/license/melchyore/adonisjs-api-query?logo=open-source-initiative
+[badge-build]: https://img.shields.io/github/actions/workflow/status/melchyore/adonisjs-api-query/build.yml?branch=main
+[badge-downloads]: https://img.shields.io/npm/dm/@melchyore/adonisjs-api-query.svg?logo=npm
