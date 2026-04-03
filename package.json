@@ -1,7 +1,7 @@
 {
   "name": "@melchyore/adonisjs-api-query",
   "description": "Easily build Lucid queries from API requests",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
   "module": "./build/index.js",
   "types": "./build/index.d.ts",
